@@ -1,0 +1,28 @@
+{
+  "assets/avatar.svg": {
+    "file": "static/js/bundle/avatar.svg",
+    "src": "assets/avatar.svg"
+  },
+  "assets/logo.svg": {
+    "file": "static/js/bundle/logo.svg",
+    "src": "assets/logo.svg"
+  },
+  "assets/vue.svg": {
+    "file": "static/js/bundle/vue.svg",
+    "src": "assets/vue.svg"
+  },
+  "main.ts": {
+    "assets": [
+      "static/js/bundle/logo.svg",
+      "static/js/bundle/avatar.svg",
+      "static/js/bundle/vue.svg"
+    ],
+    "file": "static/js/bundle/main-684f1734.js",
+    "isEntry": true,
+    "src": "main.ts"
+  },
+  "style.css": {
+    "file": "static/js/bundle/app.css",
+    "src": "style.css"
+  }
+}

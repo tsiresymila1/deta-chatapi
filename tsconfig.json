@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM","ES2021"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["vite-env.d.ts","vite/client"]
+    
+  },
+  "include": ["assets/**/*.ts", "assets/**/*.d.ts", "assets/**/*.tsx", "assets/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

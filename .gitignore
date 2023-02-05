@@ -1,0 +1,7 @@
+__pycache__ 
+node_modules 
+.pyc
+yarn.lock
+package-lock.json
+public/static/bundle/*
+!public/static/.gitkeep
