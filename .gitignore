@@ -1,6 +1,7 @@
 __pycache__ 
 node_modules 
 .pyc
+.env
 yarn.lock
 package-lock.json
 public/static/bundle/*
