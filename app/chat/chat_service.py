@@ -60,7 +60,7 @@ class ChatService():
                 for k, m in enumerate(messages):
                     if user_key not in m.readers_keys:
                         m.readers_keys.append(user_key)
-                        m.save()
+                        await m.save()
                     if k == len(messages) - 1:
                         conv = {
                             **conv,
@@ -81,7 +81,7 @@ class ChatService():
             for m in messages:
                 if user_key not in m.readers_keys:
                     m.readers_keys.append(user_key)
-                    m.save()
+                    await m.save()
                 messs.append(m)
             return {
                 **conv,
@@ -95,14 +95,14 @@ class ChatService():
             _key = str(uuid4())
             message = Message(conversation_key=conversation_key, sender_key=user_key,
                               content=data.content, type="SIMPLE", readers_keys=[user_key], key=_key)
+            await message.save()
             messages.append(message)
-            message.save()
         if data.files != None:
             for file in data.files:
                 _key = str(uuid4())
                 filename = await save_file(deta=deta, file=file, directory="medias", encrypted=True)
                 message = Message(conversation_key=conversation_key, sender_key=user_key,
                                   content=filename, type="MEDIA", readers_keys=[user_key],key=_key)
+                await message.save()
                 messages.append(message)
-                message.save()
         return messages
